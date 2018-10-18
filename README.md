@@ -28,3 +28,6 @@ Eclipse
 
 # Notice
 Setting run configuration encoding UTF-8
+
+# Lisence
+MIT Lisence
