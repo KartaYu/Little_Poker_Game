@@ -3,7 +3,7 @@ Randomly give you and the computer two cards，comparing the color and number wi
  
 # How to win
 
-1. If both of you and computer got "offsuit", comparing the biggest in your and the compoter, who has bigger one who win.  
+1. If both of you and computer got a "offsuit", comparing the biggest in your and the computer, who has bigger one who win.  
     Example:  
         I got : ♠5 ♠A and the computer got : ♠9 ♥7,I wins.  
         ![alt_tag](https://i.imgur.com/ZV46TMh.png)  
@@ -13,12 +13,20 @@ Randomly give you and the computer two cards，comparing the color and number wi
         Example:  
         I got : ♣10 ♠A and the computer got : ♥7 ♠A ,tie.  
         ![alt_tag](https://i.imgur.com/iGCD6HG.png)
-2. If both of you and computer got "pair", comparing number of the cards, who has bigger one who win.  
+2. If both of you and computer got a "pair", comparing number of the cards, who has bigger one who win.  
     Example:  
-        I got : ♦Q ♣Q and the computer got : ♥8 ♣8 ,I win.
-3. If both of you and computer got "pair" with same number, comparing color of the cards, who has bigger one who win.  
+        I got : ♦Q ♣Q and the computer got : ♥8 ♣8 ,I win.  
+        ![alt_tag](https://i.imgur.com/te1uo0m.png)
+3. If both of you and computer got a "pair" with same number, comparing color of the cards, who has bigger one who win.  
     Example:  
-        I got : ♦7 ♣7 and the computer got : ♥7 ♣7 ,the computer wins.♠
+        I got : ♦10 ♥10 and the computer got : ♥K ♣K ,the computer wins.  
+        ![alt_tag](https://i.imgur.com/Pi0TPUP.png)
+4. If one of you got a "pair",another did not, the one who got  a pair who win.  
+    Example:  
+        I got : ♣6 ♠6 and the computer got : ♠4 ♥9 ,I win.  
+        ![alt_tag](https://i.imgur.com/te1uo0m.png)  
+        I got : ♦5 ♥K and the computer got : ♣K ♥K ,the computer wins.  
+        ![alt_tag](https://i.imgur.com/3c1Pvht.png)
  
 # Java Environment
 JavaSE 1.8   
