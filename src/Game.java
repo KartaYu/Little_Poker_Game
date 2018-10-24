@@ -66,63 +66,36 @@ public class Game {
 		Result_output(result_user, result_computer, number_user, number_computer, color_user, color_computer);//輸出比較結果(print the result of comparing with the computer)
 		
 		result_user = null; result_computer = null; number_user = null ; number_computer = null ; color_user = null; color_computer = null;//releasing all memory of arrays
-}
+	}
 
     //輸出花色方法(print the color of cards which you and the computer got)
     public static void Color_output(int [] x,int j) {
-	    while(j <= 1) {
-		  int temp = x[j] % 100;
-		  if((x [j] > 100) && (x[j] < 200)) {
-			  if(temp == 14)
-				System.out.printf("%s%c ","\u2663",'A');
-			  if(temp == 13)
-				System.out.printf("%s%c ","\u2663",'K');	
-			  if(temp == 12)		
-				System.out.printf("%s%c ","\u2663",'Q');	
-			  if(temp == 11)			
-				System.out.printf("%s%c ","\u2663",'J');	
-			  if(temp < 11)
-				System.out.printf("%s%d ","\u2663",temp);
-		}
-		  if((x [j] > 200) && (x[j] < 300)) {
-			  if(temp == 14)
-				System.out.printf("%s%c ","\u2666",'A');
-			  if(temp == 13)
-				System.out.printf("%s%c ","\u2666",'K');	
-			  if(temp == 12)		
-				System.out.printf("%s%c ","\u2666",'Q');	
-			  if(temp == 11)			
-				System.out.printf("%s%c ","\u2666",'J');	
-			  if(temp < 11)
-				System.out.printf("%s%d ","\u2666",temp);
-		}
-		  if((x [j] > 300) && (x[j] < 400)) {
-			  if(temp == 14)
-				System.out.printf("%s%c ","\u2665",'A');
-			  if(temp == 13)
-				System.out.printf("%s%c ","\u2665",'K');	
-			  if(temp == 12)		
-				System.out.printf("%s%c ","\u2665",'Q');	
-			  if(temp == 11)			
-				System.out.printf("%s%c ","\u2665",'J');	
-			  if(temp < 11)
-				System.out.printf("%s%d ","\u2665",temp);
-		}
-		  if(x [j] > 400) {
-			  if(temp == 14)
-				System.out.printf("%s%c ","\u2660",'A');
-			  if(temp == 13)
-				System.out.printf("%s%c ","\u2660",'K');	
-			  if(temp == 12)		
-				System.out.printf("%s%c ","\u2660",'Q');	
-			  if(temp == 11)			
-				System.out.printf("%s%c ","\u2660",'J');	
-			  if(temp < 11)
-				System.out.printf("%s%d ","\u2660",temp);
-		  }
-		  j++;
-	  }
-   }
+		while(j <= 1) {
+			switch(x[j] / 100) {
+			case 1 :
+				System.out.printf("%s", "\u2663");break;
+			case 2 :
+				System.out.printf("%s", "\u2666");break;
+			case 3:
+				System.out.printf("%s", "\u2665");break;
+			case 4:
+				System.out.printf("%s", "\u2660");break;
+				}
+			switch(x[j] % 100) {
+			case 14:
+				System.out.printf("%c ",'A');break;
+			case 13:
+				System.out.printf("%c ",'K');break;
+			case 12:
+				System.out.printf("%c ",'Q');break;
+			case 11:
+				System.out.printf("%c ",'J');break;
+			default:
+				System.out.printf("%d ",(x[j] % 100));
+				}
+			j++;
+		}	
+    }
 
 	//輸出比較結果(print the result of comparing with the computer)
 	public static void Result_output(int [] result_user, int [] result_computer, int [] number_user, int [] number_computer, int [] color_user, int [] color_computer) {
